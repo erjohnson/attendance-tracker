@@ -37,4 +37,13 @@ describe 'TimeStamp' do
       expect(TimeStamp.all[0]).to eq new_timestamp
     end
   end
+
+  describe 'remove' do
+    it 'deletes a timestamp' do
+      new_timestamp = TimeStamp.new({})
+      new_timestamp.save
+      new_timestamp.remove
+      expect(TimeStamp.all).to eq []
+    end
+  end
 end

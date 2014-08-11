@@ -20,4 +20,8 @@ class TimeStamp
   def save
     @@timestamps << self
   end
+
+  def remove
+    TimeStamp.all.delete(self)
+  end
 end
