@@ -12,6 +12,11 @@ describe 'User' do
     expect(new_user.name).to eq 'Joe'
   end
 
+  it 'lets you read the current lesson' do
+    new_user = User.new({:name => 'Joe', :lesson => 1})
+    expect(new_user.current_lesson).to eq 1
+  end
+
   describe '.all' do
     it 'starts as an empty array' do
       expect(User.all).to eq []

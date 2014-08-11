@@ -1,12 +1,12 @@
 class User
 
-  attr_reader :name
+  attr_reader :name, :current_lesson
 
   @@users = []
 
   def initialize attributes
     @name = attributes[:name]
-    @current_lesson = attributes[:current_lesson]
+    @current_lesson = attributes[:lesson]
   end
 
   def self.all
@@ -15,6 +15,10 @@ class User
 
   def self.clear
     @@users = []
+  end
+
+  def self.find name
+
   end
 
   def save
