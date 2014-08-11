@@ -17,6 +17,10 @@ class TimeStamp
     @@timestamps = []
   end
 
+  def self.find name
+    TimeStamp.all.select { |x| x.user_name == name  }
+  end
+
   def save
     @@timestamps << self
   end

@@ -30,6 +30,18 @@ describe 'TimeStamp' do
     end
   end
 
+  describe '.find' do
+    it 'finds timestamps of a user' do
+      new_timestamp1 = TimeStamp.new('Gary')
+      new_timestamp1.save
+      new_timestamp2 = TimeStamp.new('Larry')
+      new_timestamp2.save
+      new_timestamp3 = TimeStamp.new('Larry')
+      new_timestamp3.save
+      expect(TimeStamp.find("Larry")).to eq [new_timestamp2, new_timestamp3]
+    end
+  end
+
   describe 'save' do
     it 'saves a timestamp' do
       new_timestamp = TimeStamp.new('Gary')
