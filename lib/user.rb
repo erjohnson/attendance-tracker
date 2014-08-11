@@ -21,6 +21,17 @@ class User
     User.all.detect { |x| x.name == name }
   end
 
+  def self.login name
+    query = User.find(name)
+    if query == nil
+      new_user = User.new({:name => name})
+      new_user.save
+      new_user
+    else
+      query
+    end
+  end
+
   def save
     @@users << self
   end

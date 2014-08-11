@@ -41,6 +41,25 @@ describe 'User' do
     end
   end
 
+  describe '.login' do
+    it 'will return an existing user' do
+      new_user1 = User.new({:name => 'Joe'})
+      new_user1.save
+      new_user2 = User.new({:name => 'Martha'})
+      new_user2.save
+      expect(User.login("Joe")).to eq new_user1
+    end
+
+    it 'will create a new user if one does not exist' do
+      new_user1 = User.new({:name => 'Joe'})
+      new_user1.save
+      new_user2 = User.new({:name => 'Martha'})
+      new_user2.save
+      User.login('Mary')
+      expect(User.all[2].name).to eq 'Mary'
+    end
+  end
+
   describe 'save' do
     it 'saves a user' do
       new_user = User.new({})
