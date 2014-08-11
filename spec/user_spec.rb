@@ -57,4 +57,18 @@ describe 'User' do
       expect(User.all).to eq []
     end
   end
+
+  describe 'time_stamps' do
+    it 'returns timestamps created by the user' do
+      new_user = User.new({:name => 'Joe'})
+      new_user.save
+      new_timestamp1 = TimeStamp.new('Joe')
+      new_timestamp1.save
+      new_timestamp2 = TimeStamp.new('Larry')
+      new_timestamp2.save
+      new_timestamp3 = TimeStamp.new('Joe')
+      new_timestamp3.save
+      expect(new_user.time_stamps).to eq [new_timestamp1, new_timestamp3]
+    end
+  end
 end

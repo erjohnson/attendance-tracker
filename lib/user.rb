@@ -28,4 +28,8 @@ class User
   def remove
     User.all.delete(self)
   end
+
+  def time_stamps
+    TimeStamp.find(@name)
+  end
 end
