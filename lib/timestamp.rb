@@ -4,5 +4,6 @@ class TimeStamp
 
   def initialize name
     @user_name = name
+    @time = Time.now.strftime("%I:%M%p")
   end
 end
