@@ -22,7 +22,7 @@ describe 'User' do
       expect(User.all).to eq []
     end
 
-    it 'lists all users' do
+    it 'shows all users' do
       new_user1 = User.new({:name => 'Joe'})
       new_user1.save
       new_user2 = User.new({:name => 'Martha'})

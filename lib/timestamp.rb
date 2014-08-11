@@ -16,4 +16,8 @@ class TimeStamp
   def self.clear
     @@timestamps = []
   end
+
+  def save
+    @@timestamps << self
+  end
 end

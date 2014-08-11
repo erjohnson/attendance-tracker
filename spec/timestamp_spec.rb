@@ -20,5 +20,21 @@ describe 'TimeStamp' do
     it 'starts as an empty array' do
       expect(TimeStamp.all).to eq []
     end
+
+    it 'shows all timestamps' do
+      new_timestamp1 = TimeStamp.new('Gary')
+      new_timestamp1.save
+      new_timestamp2 = TimeStamp.new('Larry')
+      new_timestamp2.save
+      expect(TimeStamp.all).to eq [new_timestamp1, new_timestamp2]
+    end
+  end
+
+  describe 'save' do
+    it 'saves a timestamp' do
+      new_timestamp = TimeStamp.new('Gary')
+      new_timestamp.save
+      expect(TimeStamp.all[0]).to eq new_timestamp
+    end
   end
 end
