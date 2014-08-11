@@ -12,4 +12,8 @@ class TimeStamp
   def self.all
     @@timestamps
   end
+
+  def self.clear
+    @@timestamps = []
+  end
 end
