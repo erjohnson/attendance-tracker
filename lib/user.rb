@@ -12,4 +12,8 @@ class User
   def self.all
     @@users
   end
+
+  def save
+    @@users << self
+  end
 end

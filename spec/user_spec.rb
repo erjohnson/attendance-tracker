@@ -17,4 +17,12 @@ describe 'User' do
       expect(User.all).to eq []
     end
   end
+
+  describe 'save' do
+    it 'saves a user' do
+      new_user = User.new({})
+      new_user.save
+      expect(User.all[0]).to eq new_user
+    end
+  end
 end
