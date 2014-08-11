@@ -20,4 +20,8 @@ class User
   def save
     @@users << self
   end
+
+  def remove
+    @@users.delete(self)
+  end
 end

@@ -33,4 +33,13 @@ describe 'User' do
       expect(User.all[0]).to eq new_user
     end
   end
+
+  describe 'remove' do
+    it 'deletes a user' do
+      new_user = User.new({})
+      new_user.save
+      new_user.remove
+      expect(User.all).to eq []
+    end
+  end
 end
