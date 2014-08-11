@@ -16,6 +16,14 @@ describe 'User' do
     it 'starts as an empty array' do
       expect(User.all).to eq []
     end
+
+    it 'lists all users' do
+      new_user1 = User.new({:name => 'Joe'})
+      new_user1.save
+      new_user2 = User.new({:name => 'Martha'})
+      new_user2.save
+      expect(User.all).to eq [new_user1, new_user2]
+    end
   end
 
   describe 'save' do

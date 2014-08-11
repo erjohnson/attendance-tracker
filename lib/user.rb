@@ -13,6 +13,10 @@ class User
     @@users
   end
 
+  def self.clear
+    @@users = []
+  end
+
   def save
     @@users << self
   end
