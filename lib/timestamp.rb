@@ -6,7 +6,7 @@ class TimeStamp
 
   def initialize name
     @user_name = name
-    @time = Time.now.strftime("%I:%M%p")
+    @time = Time.now.strftime("%m/%d/%Y - %I:%M%p")
   end
 
   def self.all

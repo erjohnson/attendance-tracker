@@ -15,9 +15,16 @@ def header
 end
 
 def main_options
-  puts "M > Mark Yourself Here"
+  puts "H > Mark Yourself Here"
   puts "S > Show all students"
   puts "T > View Attendance"
   puts "X > Exit"
+  whitespace
+end
+
+def times_list
+  TimeStamp.all.each do |result|
+    puts result.time + " - " + result.user_name
+  end
   whitespace
 end
