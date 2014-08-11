@@ -16,8 +16,12 @@ def main_menu
 end
 
 def login
+  header
   puts "Please enter your name:"
   name = gets.chomp
+  puts "What lesson # are you on?"
+  num = gets.chomp.to_i
+
 end
 
 main_menu
