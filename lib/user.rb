@@ -18,7 +18,7 @@ class User
   end
 
   def self.find name
-
+    User.all.detect { |x| x.name == name }
   end
 
   def save
@@ -26,6 +26,6 @@ class User
   end
 
   def remove
-    @@users.delete(self)
+    User.all.delete(self)
   end
 end

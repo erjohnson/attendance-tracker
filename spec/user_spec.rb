@@ -31,6 +31,16 @@ describe 'User' do
     end
   end
 
+  describe '.find' do
+    it 'finds a user by name' do
+      new_user1 = User.new({:name => 'Joe'})
+      new_user1.save
+      new_user2 = User.new({:name => 'Martha'})
+      new_user2.save
+      expect(User.find("Joe")).to eq new_user1
+    end
+  end
+
   describe 'save' do
     it 'saves a user' do
       new_user = User.new({})
