@@ -15,4 +15,10 @@ describe 'TimeStamp' do
     new_timestamp = TimeStamp.new('Rhonda')
     expect(new_timestamp.time).to eq Time.now.strftime("%I:%M%p")
   end
+
+  describe '.all' do
+    it 'starts as an empty array' do
+      expect(TimeStamp.all).to eq []
+    end
+  end
 end

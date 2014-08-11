@@ -1,8 +1,8 @@
 class User
 
-  attr_reader :name, :current_lesson
-
   @@users = []
+
+  attr_reader :name, :current_lesson
 
   def initialize attributes
     @name = attributes[:name]
