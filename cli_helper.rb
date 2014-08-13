@@ -31,7 +31,7 @@ def times_list
 end
 
 def make_sample_data
-  names = ['Bob', 'Louie', 'Jessica', 'Martha', 'Greg', 'Sunburst']
+  names = ['Rolando', 'Mira', 'Leland', 'Brielle', 'Cameron', 'Sunburst']
 
   names.each do |name|
     new_user = User.login(name)
