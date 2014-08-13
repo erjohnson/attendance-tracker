@@ -1,7 +1,7 @@
 # :watch: Attendance tracker
 
 
-This project is for the [Object-oriented Ruby assessment]() at [Epicodus]().
+This project is for the [Object-oriented Ruby assessment](http://www.learnhowtoprogram.com/lessons/ruby-oo-assessment) at [Epicodus](http://www.epicodus.com/).
 
 Attendance tracker is rudimentary representation of a student attendance system. When a student arrives they can login using their name.  The current time is then recorded upon login.  Arrival time stamps can be viewed for all students or for each student.
 
