@@ -10,6 +10,8 @@ def main_menu
     show_students
   when 'T'
     show_times
+  when 'A'
+    make_sample_data
   when 'X'
     exit
   end

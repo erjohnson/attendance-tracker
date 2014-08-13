@@ -28,4 +28,12 @@ class TimeStamp
   def remove
     TimeStamp.all.delete(self)
   end
+
+  def sample_time_one
+    @time = Time.new(2014, 8, 13, 8, 53).strftime("%m/%d/%Y - %I:%M%p")
+  end
+
+  def sample_time_two
+    @time = Time.new(2014, 8, 12, 8, 053).strftime("%m/%d/%Y - %I:%M%p")
+  end
 end
