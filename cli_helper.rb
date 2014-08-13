@@ -31,10 +31,21 @@ def times_list
 end
 
 def make_sample_data
-  new_user1 = User.login('Bob')
-  new_time1 = TimeStamp.new(new_user1.name)
-  new_time1.sample_time
-  new_time1.save
+  names = ['Bob', 'Louie', 'Jessica', 'Martha', 'Greg', 'Sunburst']
+
+  names.each do |name|
+    new_user = User.login(name)
+    new_time = TimeStamp.new(new_user.name)
+    new_time.sample_time_one
+    new_time.save
+  end
+
+  names.each do |name|
+    new_user = User.login(name)
+    new_time = TimeStamp.new(new_user.name)
+    new_time.sample_time_two
+    new_time.save
+  end
 
   main_menu
 end
